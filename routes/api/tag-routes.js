@@ -7,10 +7,15 @@ router.get('/', (req, res) => {
   Tag.findAll({
     include:[
       {
-        model: Product,
-        attributes: ['id','product_name','price','stock']
-      }
-    ]
+        model: ProductTag,
+        attributes: ['product_id'],
+        include:[
+          {
+            model: Product,
+            attributes: ['id','product_name','price','stock']
+          }
+        ]
+      }]
   })
   .then(tagData => res.json(tagData))
   .catch(err => {
