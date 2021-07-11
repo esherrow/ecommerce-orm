@@ -48,7 +48,7 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   Category.create({
-    category_name: req.params.category_name
+    category_name: req.body.category_name
   })
   .then(categoryData => res.json(categoryData))
   .catch(err => {
@@ -60,7 +60,7 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
   Category.update(
     {
-      category_name: req.params.category_name
+      category_name: req.body.category_name
     },
     {
       where:{
@@ -81,7 +81,7 @@ router.put('/:id', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-  Category.delete({
+  Category.destroy({
     where:{
       id: req.params.id
     }
