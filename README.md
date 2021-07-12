@@ -3,7 +3,7 @@
   ## Description
   Using Sequelize and MySQL to finish the backend of an e-commerce inventory database application
 
-  Walkthrough: 
+  Walkthrough: https://drive.google.com/file/d/1NGgtRc5zQ6tL38wZJy8xJOh4TJtqV95Q/view?usp=sharing
     
   * [Installation](#installation)
   * [Usage](#usage)
